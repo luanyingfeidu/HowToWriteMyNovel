@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title>
+			Throwing 1 dice
+		</title>
+	</head>
+	<script type="text/javascript">
+		var cwidth = 400
+		var cheight = 300
+		var dicex = 50
+		var dicey = 50
+		var dicewidth = 100
+		var diceheigh = 100
+		var dotrad = 6
+		var ctx
+		function init(){
+			ctx = document.getElementById('canvas').getContext('2d')
+			var ch = 1 + Math.floor(Math.random()*6)
+			drawface(ch,dicex,dicey,dicewidth,diceheigh)
+			ch = 1 + Math.floor(Math.random()*6)
+			dicex += 150
+			drawface(ch,dicex,dicey,dicewidth,diceheigh)
+		}
+		function drawface(n,dicex,dicey,dicewidth,diceheigh){
+			ctx.lineWidth = 5
+			ctx.clearRect(dicex,dicey,dicewidth,diceheigh)
+			ctx.strokeRect(dicex,dicey,dicewidth,diceheigh)
+			ctx.fillStyle = "#009966"
+			switch(n){
+				case 1:
+					draw1()
+					break
+				case 2:
+					draw2()
+					break
+				case 3:
+					draw2()
+					draw1()
+					break
+				case 4:
+					draw4()
+					break
+				case 5:
+					draw4()
+					draw1()
+					break
+				case 6:
+					draw4()
+					draw2mid()
+					break
+				default: break
+			}
+		}
+		function draw1(){
+			var dotx
+			var doty
+			ctx.beginPath()
+			dotx = dicex + 0.5*dicewidth
+			doty = dicey + 0.5*diceheigh
+			ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true)
+			ctx.closePath()
+			ctx.fill()
+		}
+		function draw2(){
+			var dotx
+			var doty
+			ctx.beginPath()
+			dotx = dicex + 3*dotrad
+			doty = dicey + 3*dotrad
+			ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true)
+			dotx = dicex + dicewidth - 3*dotrad
+			doty = dicey + diceheigh - 3*dotrad
+			ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true)
+			ctx.closePath()
+			ctx.fill()
+		}
+		function draw4(){
+			var dotx
+			var doty
+			ctx.beginPath()
+			dotx = dicex + 3*dotrad
+			doty = dicey + 3*dotrad
+			ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true)
+			dotx = dicex + 3*dotrad
+			doty = dicey + diceheigh - 3*dotrad
+			ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true)
+			ctx.closePath()
+			ctx.fill()
+			ctx.beginPath()
+			dotx = dicex + dicewidth - 3*dotrad
+			doty = dicey + 3*dotrad
+			ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true)
+			dotx = dicex + dicewidth - 3*dotrad
+			doty = dicey + diceheigh - 3*dotrad
+			ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true)
+			ctx.closePath()
+			ctx.fill()
+		}
+		function draw2mid(){
+			var dotx
+			var doty
+			ctx.beginPath()
+			dotx = dicex + 3*dotrad
+			doty = dicey + 0.5*diceheigh
+			ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true)
+			dotx = dicex + dicewidth - 3*dotrad
+			doty = dicey + 0.5*diceheigh
+			ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true)
+			ctx.closePath()
+			ctx.fill()
+		}
+	</script>
+	<body onLoad = "init()">
+		<canvas id = "canvas" width = "400" height = "300">
+			your browser is so bad!!
+		</canvas>
+	</body>
+<html>

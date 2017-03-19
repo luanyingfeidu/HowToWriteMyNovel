@@ -16,10 +16,53 @@
 	"buffers":
 	[
 		{
-			"file": "TestCreateTable.SQL",
+			"file": "views/index.html",
 			"settings":
 			{
-				"buffer_size": 1226,
+				"buffer_size": 432,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/register.html",
+			"settings":
+			{
+				"buffer_size": 3829,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/login.html",
+			"settings":
+			{
+				"buffer_size": 3197,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/Home.html",
+			"settings":
+			{
+				"buffer_size": 410,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1513,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var express = require('express');\nvar router = express.Router();\n\n/* GET home page. */\nrouter.get('/', function(req, res, next) {\n  res.render('index', { title: 'Express' });\n});\n\nmodule.exports = router;",
+			"file": "routes/index.js",
+			"file_size": 205,
+			"file_write_time": 1489931529000000,
+			"settings":
+			{
+				"buffer_size": 204,
 				"line_ending": "Unix"
 			}
 		}
@@ -60,9 +103,13 @@
 	},
 	"file_history":
 	[
+		"/Users/gaoyang/HowToWriteMyNovel/views/Home.html",
+		"/Users/gaoyang/HowToWriteMyNovel/routes/users.js",
+		"/Users/gaoyang/HowToWriteMyNovel/routes/index.js",
+		"/Users/gaoyang/HowToWriteMyNovel/TestCreateTable.SQL",
+		"/Users/gaoyang/HowToWriteMyNovel/bin/www",
 		"/Users/gaoyang/HowToWriteMyNovel/server.js",
 		"/Users/gaoyang/HowToWriteMyNovel/ConnectMySQL.js",
-		"/Users/gaoyang/HowToWriteMyNovel/TestCreateTable.SQL",
 		"/Users/gaoyang/HowToWriteMyNovel/TestCreateTable.js",
 		"/Users/gaoyang/Downloads/websites.sql",
 		"/Users/gaoyang/HowToWriteMyNovel/3Ws for Lunch.html",
@@ -100,6 +147,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"var app = express();",
 			"ShowResult",
 			"http",
 			"tumblr",
@@ -148,28 +196,166 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "TestCreateTable.SQL",
+					"file": "views/index.html",
 					"settings":
 					{
-						"buffer_size": 1226,
+						"buffer_size": 432,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								299,
+								299
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SQL/SQL.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/register.html",
+					"settings":
+					{
+						"buffer_size": 3829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								417,
+								417
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/login.html",
+					"settings":
+					{
+						"buffer_size": 3197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2094,
+								2094
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 551.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/Home.html",
+					"settings":
+					{
+						"buffer_size": 410,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								410,
+								410
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app.js",
+					"settings":
+					{
+						"buffer_size": 1513,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								780,
+								786
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "routes/index.js",
+					"settings":
+					{
+						"buffer_size": 204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

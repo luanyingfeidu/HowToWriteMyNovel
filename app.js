@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var routes = require('./routes/index');
 
 var app = express();
 
@@ -22,8 +23,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/users', users); // 即为为路径 /users 设置路由
+app.use('/login',routes); // 即为为路径 /login 设置路由
+app.use('/register',routes); // 即为为路径 /register 设置路由
+app.use('/home',routes); // 即为为路径 /home 设置路由
+app.use("/logout",routes); // 即为为路径 /logout 设置路由
+
 app.use('/', index);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
